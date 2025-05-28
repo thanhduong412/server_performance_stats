@@ -13,11 +13,11 @@ df -BM --total | awk '/total/ {printf "%s / %s (%s/ used)\n", $3, $2, $5}'
 # Top 5 processes by CPU usage
 echo --------------------
 echo [INFO] Top 5 Processes by CPU Usage:
-ps =eo pid,comm,$cpu --sort=-%cpu | head -n 6
+ps -eo pid,comm,$cpu --sort=-%cpu | head -n 6
 # Top 5 processes by memory usage
 echo --------------------
 echo [INFO] Top 5 Processes by Memory Usage:
-ps =eo pid,comm,$mem --sort=-%mem | head -n 6
+ps -eo pid,comm,$mem --sort=-%mem | head -n 6
 # OS version
 echo --------------------
 echo [INFO] OS Version:
